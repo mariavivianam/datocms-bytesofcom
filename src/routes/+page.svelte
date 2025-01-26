@@ -52,5 +52,5 @@
     ]}
   />
 
-  <footer>Published at {page._firstPublishedAt}</footer>
+  <footer></footer>
 {/if}
