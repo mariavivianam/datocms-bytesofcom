@@ -27,9 +27,14 @@
 <Head data={$subscription.data?._site.faviconMetaTags} />
 
 <header>
-  <h1>DatoCMS + SvelteKit Starter Kit</h1>
+  <h1>Bytes Of</h1>
   <nav>
-    <a class="navlink" href="https://www.datocms.com/docs/svelte"> 📚 Full Integration Guide </a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
     <DraftModeToggler />
   </nav>
 </header>
