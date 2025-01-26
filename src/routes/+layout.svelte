@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Head, querySubscription } from '@datocms/svelte';
   import type { LayoutData } from './$types';
-  import DraftModeToggler from '$lib/components/DraftModeToggler/index.svelte';
   import type { Snippet } from 'svelte';
 
   interface Props {
@@ -35,7 +34,6 @@
       <li><a href="/blog">Blog</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <DraftModeToggler />
   </nav>
 </header>
 

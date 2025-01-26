@@ -1,6 +1,5 @@
 import { env as privateEnv } from '$env/dynamic/private';
 import { recordToSlug, recordToWebsiteRoute } from '$lib/datocms/recordInfo';
-import { draftModeHeaders } from '$lib/draftMode.server';
 import { buildClient } from '@datocms/cma-client';
 import { json } from '@sveltejs/kit';
 import { JSDOM } from 'jsdom';
@@ -75,9 +74,7 @@ export const GET: RequestHandler = async ({ url }) => {
      * do this, we set the cookies that are obtained by temporarily enabling
      * Draft Mode.
      */
-    const pageRequest = await fetch(new URL(websitePath, url).toString(), {
-      headers: draftModeHeaders(),
-    });
+    const pageRequest = await fetch(new URL(websitePath, url).toString(), { });
 
     if (!pageRequest.ok) {
       return invalidRequestResponse(`Invalid status for ${websitePath}: ${pageRequest.status}`);
